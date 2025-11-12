@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carnet de compétences – Étape 1</title>
+    <style>
+      :root {
+        --bg: #0f141a;
+        --paper: #0b1224;
+        --ink: #eaeef6;
+        --muted: #a7b1c2;
+        --line: #223049;
+        --acc: #6dd3a9;
+        --acc-weak: #1d2b3f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .app {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        min-height: 100dvh;
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 0;
+        height: 100dvh;
+        background: var(--paper);
+        border-right: 1px solid var(--line);
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, transparent, rgba(109, 211, 169, 0.18));
+        border: 1px solid var(--line);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+      }
+
+      .brand h1 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .brand p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      nav a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        color: var(--muted);
+        text-decoration: none;
+        border: 1px solid transparent;
+      }
+
+      nav a:hover {
+        background: var(--acc-weak);
+        color: var(--ink);
+        border-color: var(--line);
+      }
+
+      .cta {
+        margin-top: auto;
+        display: grid;
+        gap: 10px;
+      }
+
+      .cta a {
+        appearance: none;
+        border: 1px solid var(--line);
+        background: var(--acc-weak);
+        color: var(--ink);
+        padding: 10px 12px;
+        border-radius: 12px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .cta .primary {
+        background: var(--acc);
+        border-color: transparent;
+        color: #092013;
+        font-weight: 600;
+      }
+
+      .content {
+        padding: 28px;
+      }
+
+      .section {
+        max-width: 960px;
+        margin: 0 auto 24px;
+      }
+
+      .paper {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      h2 {
+        font-size: clamp(20px, 2.6vw, 28px);
+        margin: 0 0 8px;
+      }
+
+      .progress-bar {
+        background: var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        height: 8px;
+        margin: 6px 0;
+        width: 100%;
+      }
+
+      .progress {
+        background: var(--acc);
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="avatar">WL</div>
+          <div>
+            <h1>Winnie Léna TCHAIWOU</h1>
+            <p class="muted">IR4 · Informatique & Réseaux (ESAIP)</p>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#intro" class="active">🏁 Introduction</a>
+          <a href="#skills">🧠 Compétences</a>
+          <a href="#xp">💼 Expériences</a>
+          <a href="#project">💻 Projet académique</a>
+          <a href="#benevolat">💚 Engagements</a>
+          <a href="#cv">📄 CV</a>
+          <a href="#contact">📬 Contact</a>
+        </nav>
+
+        <div class="cta">
+          <a class="primary" href="#" onclick="window.print()">Exporter en PDF</a>
+          <a href="mocv.pdf" download>📎 Télécharger mon CV (mocv.pdf)</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section id="intro" class="section">
+          <div class="paper">
+            <h2>Introduction</h2>
+            <p>
+              Passionnée par l’intelligence artificielle, je m’intéresse particulièrement à la manière dont elle allie <strong>logique, créativité</strong> et <strong>impact concret</strong>. J’aime explorer comment des algorithmes et des modèles peuvent résoudre des problèmes réels et améliorer le quotidien. L’IA représente pour moi un domaine d’innovation continue où chaque projet est une occasion d’apprendre, de comprendre et de construire des solutions utiles et éthiques.
+            </p>
+            <p class="muted">
+              Aujourd’hui, mon objectif est de renforcer mes compétences en IA, de participer à des projets appliqués et d’apporter une approche à la fois <strong>analytique</strong> et <strong>humaine</strong> aux technologies intelligentes.
+            </p>
+          </div>
+        </section>
+
+        <section id="skills" class="section">
+          <div class="paper">
+            <h2>Compétences clés</h2>
+            <p>
+              <strong>Techniques :</strong> Python, Flask, Docker, Git/GitLab CI, Linux, Réseaux, Sécurité, Terraform, PostgreSQL, Spark.
+            </p>
+            <p>
+              <strong>Métiers :</strong> API design, intégration continue, data analytics, déploiement cloud, éco-conception.
+            </p>
+            <p>
+              <strong>Transversales :</strong> Autonomie, communication, pédagogie, organisation, esprit critique, travail en équipe.
+            </p>
+            <br />
+
+            <h3>Niveaux (exemples)</h3>
+            <p class="muted">Sécurité Web</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+            <p class="muted">Optimisation performance</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
+            </div>
+            <p class="muted">Data engineering</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+            <p class="muted">Python scripts</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 65%"></div>
+            </div>
+            <p class="muted">JavaScript</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
+            <p class="muted">Réseaux</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 65%"></div>
+            </div>
+            <p class="muted">IA Engineering – Modélisation et optimisation</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+            <p class="muted">IA Engineering – Éthique et durabilité</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="xp" class="section">
+          <div class="paper">
+            <h2>Expériences professionnelles</h2>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="card">
+                  <h3>
+                    Stagiaire — GILLESCEDRIC.DEV
+                    <span class="muted" style="font-size: 13px">(06–08/2025 · Angers)</span>
+                  </h3>
+                  <p class="muted">
+                    Analyse et optimisation du site e-commerce <em>Passion Pains</em> : audit complet du site, amélioration des performances (LiteSpeed Cache, CDN Hostinger), renforcement de la sécurité (Wordfence, reCAPTCHA, sauvegardes automatiques) et optimisation de l’expérience utilisateur. Résultat : site plus rapide, plus sécurisé et plus intuitif.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="card">
+                  <h3>
+                    Ambassadrice — ESAIP
+                    <span class="muted" style="font-size: 13px">(2024–2025)</span>
+                  </h3>
+                  <p class="muted">
+                    Représentation de l’école sur salons et JPO, animation de stands et échanges avec lycéens. Développement de compétences en communication, leadership et pédagogie à travers la promotion de la filière Informatique & Réseaux.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tl-item">
+                <div class="card">
+                  <h3>
+                    Bénévole — PESF-ESAIP
+                    <span class="muted" style="font-size: 13px">(2023–2024)</span>
+                  </h3>
+                  <p class="muted">
+                    Participation à l’organisation d’événements solidaires : sensibilisation aux enjeux environnementaux et sociaux, collaboration avec d’autres étudiants pour la mise en œuvre d’initiatives collectives.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="project" class="section">
+          <div class="paper">
+            <h2>Projet académique</h2>
+            <p>
+              Dans le cadre du hackathon <strong>Design4Green</strong>, j’ai participé à la conception d’une application web éco-conçue de résumé de texte à base d’IA. Le projet visait à allier performance et sobriété numérique, en mesurant la consommation énergétique et les émissions de CO₂ générées par le modèle de traitement. J’ai travaillé sur le backend en <strong>Flask</strong> et <strong>Python</strong>, en intégrant des optimisations telles que la quantification et le pruning pour réduire l’empreinte carbone du modèle.
+            </p>
+            <p class="muted">
+              Ce projet m’a permis d’approfondir mes connaissances en IA, en développement durable et en optimisation de modèles, tout en expérimentant le travail d’équipe en mode agile.
+            </p>
+          </div>
+        </section>
+
+        <section id="benevolat" class="section">
+          <div class="paper">
+            <h2>Engagements & initiatives</h2>
+            <p>
+              En parallèle de mon parcours académique, je m’investis activement dans plusieurs initiatives qui me tiennent à cœur. En tant qu’<strong>ambassadrice de l’ESAIP</strong>, j’ai participé à la représentation de l’école lors de salons d’orientation et de journées portes ouvertes, où j’ai pu accueillir les visiteurs, présenter les parcours et partager mon expérience d’élève ingénieure.
+            </p>
+            <p>
+              Mon <strong>engagement bénévole</strong> s’est également illustré au sein de <strong>PESF-ESAIP</strong> et de l’association <strong>Cop1 Angers</strong>. Ces expériences m’ont amenée à collaborer sur des actions solidaires, telles que des collectes alimentaires, des campagnes de sensibilisation environnementale et des initiatives de soutien aux étudiants en difficulté.
+            </p>
+          </div>
+        </section>
+
+        <section id="cv" class="section">
+          <div class="paper">
+            <h2>CV</h2>
+            <p>
+              Mon CV en ligne : <a href="mocv.pdf" download>📎 Télécharger la version PDF (mocv.pdf)</a>
+            </p>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <div class="paper">
+            <h2>Contact</h2>
+            <p>
+              📧 <strong>Email :</strong> <a href="mailto:winnietchaiwou@gmail.com">winnietchaiwou@gmail.com</a><br />
+              📞 <strong>Téléphone :</strong> <a href="tel:+33745568831">+33 7 45 56 88 31</a><br />
+    
+              📍 <strong>Localisation :</strong> Angers, France
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
